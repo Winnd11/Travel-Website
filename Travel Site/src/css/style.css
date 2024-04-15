@@ -10,9 +10,6 @@
 /* font-family: 'Titillium Web', sans-serif; */
 /* font-family: 'Inter', sans-serif; */
 
-
-/* <svg fill="#1290CB" width="64px" height="64px" viewBox="0 0 50 50" version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" overflow="inherit" stroke="#1290CB"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M49 41c0 4.4-3.6 8-8 8h-32c-4.4 0-8-3.6-8-8v-32c0-4.4 3.6-8 8-8h32c4.4 0 8 3.6 8 8v32z"></path></g></svg> */
-
 :root {
     --blue-main: #0092ca;
     --blue: #393e46;
@@ -88,11 +85,88 @@ nav li input {
     color: var(--text-black);
 }
 
-nav ul span {
-    position: absolute;
-    right: 17em;
-    top: 1.5em;
+dialog {
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 260px;
+    transition: 0.3s;
+}
+
+dialog h1 {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    text-align: center;
+    margin-top: -0.1em;
+}
+
+dialog input, label, a, button {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+}
+
+dialog input {
+    outline: none;
+    border: 2px var(--border-dialog) solid;
+    border-radius: 5px;
+    padding: 3px;
+    width: 290px;
+}
+
+dialog a {
+    text-decoration: none;
+    color: var(--blue-link);
+    font-size: 15px;
+}
+
+dialog button {
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px;
+    left: 50%;
+    width: 290px;
+    margin-top: 5%;
+    transform: translate(-50%);
     cursor: pointer;
+    background-color: var(--blue-main);
+    color: var(--text-white);
+    transition: 0.3s;
+}
+
+dialog button:hover {
+    background-color: #0858a9;
+}
+
+dialog[open]::backdrop {
+    animation: backdrop 0.3s ease forwards;
+}
+
+@keyframes backdrop {
+    from {
+        background: transparent;
+    }
+
+    to {
+        background-color: rgba(44, 44, 44, 0.4);
+    }
+}
+
+#sing-up {
+    margin-top: 1em;
+    text-align: center;
+}
+
+#sing-up::before {
+    content: 'Not a member? ';
+    color: var(--text-black);
+    position: relative;
 }
 
 #circle-gradient {
@@ -116,7 +190,6 @@ nav ul span {
 .widget {
     display: none;
 }
-
 
 #aldeia {
     width: 100%;
@@ -185,7 +258,6 @@ nav ul span {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-
 #text2 {
     margin-top: 10px;
     position: absolute;
@@ -208,7 +280,6 @@ nav ul span {
     margin-top: 35px;
     margin-left: 5px;
 }
-
 
 #airplane {
     top: 0;
@@ -250,13 +321,6 @@ nav ul span {
     opacity: 0.90;
     z-index: 4;
 }
-
-
-
-/* rgba(65, 65, 65, 0.8); */
-
-/* background slide */
-
 
 .miles-program {
     z-index: 5;
@@ -351,7 +415,6 @@ nav ul span {
 
 }
 
-
 .hotels {
     position: absolute;
     top: 90%;
@@ -403,7 +466,6 @@ nav ul span {
     color: var(--text-white);
 }
 
-
 .hotel-list-btn img {
    width: 250px;
    height: 200px;
@@ -434,7 +496,6 @@ nav ul span {
     font-family: 'Comfortaa', sans-serif;
 }
 
-
 /* star */
 .hotel-list-square1 svg {
     width: 20px;
@@ -451,7 +512,6 @@ nav ul span {
     margin-top: -8px;
     fill: var(--star-color);
 }
-
 
 .star-info1 {
     position: absolute;
@@ -690,7 +750,6 @@ nav ul span {
     overflow: hidden;
 }
 
-
 .about-us-responsive {
     display: none;
 }
@@ -764,7 +823,6 @@ nav ul span {
     top: 75%;
     left: 42%;
 }
-
 
 .footer {
     position: absolute;
