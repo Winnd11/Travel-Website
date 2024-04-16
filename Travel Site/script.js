@@ -1,6 +1,32 @@
 const dialog = document.querySelector('dialog')
 const openL = document.getElementById('open')
 
+document.getElementById('loginBtn').addEventListener('click', login)
+function login() {
+    let email = document.getElementById('email').value
+    let pwd = document.getElementById('password').value
+
+    person = {
+        user: 'William',
+        password: '123'
+    }
+
+    if (email == person.user && pwd == person.password) {
+        dialog.close()
+        document.querySelector('.popup-text').innerHTML = `Wecome Back ${person.user}`
+        const popup = document.querySelector('.popup')
+        popup.style.animation = 'pop 7s ease'
+    }
+     else
+    {
+        document.getElementById('erroMsg').innerHTML = 'Username Or Password Are Incorrect'
+    }
+
+    if (email == '' && pwd == '') {
+        document.getElementById('erroMsg').innerHTML = 'Username Or Password Are Empty'
+    }
+}
+
 openL.addEventListener('click', () => {
   dialog.showModal();
 });
