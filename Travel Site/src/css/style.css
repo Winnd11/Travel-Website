@@ -85,6 +85,54 @@ nav li input {
     color: var(--text-black);
 }
 
+.popup {
+    width: 230px;
+    height: 80px;
+    position: fixed;
+    left: 50%;
+    margin-left: -115px;
+    background-image: url("../img/blob-haikei.png");
+    background-size: 400px 200px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    color: #fff;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: -9em;
+    z-index: 13;
+}
+
+.popup p {
+    font-family: 'Comfortaa', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 60px;
+    z-index: 13;
+}
+
+@keyframes pop {
+    0% {
+        margin-top: -9em;
+    }
+
+    25% {
+        margin-top: -1em;
+    }
+
+    50% {
+        margin-top: -1em;
+    }
+
+    75% {
+        margin-top: -1em;
+    }
+
+    100% {
+        margin-top: -9em;
+    }
+}
+
 dialog {
     border: none;
     border-radius: 10px;
