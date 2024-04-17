@@ -15,7 +15,11 @@ function login() {
         dialog.close()
         document.querySelector('.popup-text').innerHTML = `Wecome Back ${person.user}`
         const popup = document.querySelector('.popup')
+        const loginIc = document.querySelector('#login-icon')
         popup.style.animation = 'pop 7s ease'
+        openL.style.display = 'none'
+        loginIc.style.display = 'block'
+        loginIc.style.marginLeft = '-30px'
     }
      else
     {
